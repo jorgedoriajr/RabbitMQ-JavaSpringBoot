@@ -1,30 +1,14 @@
+![image](https://github.com/jorgedoriajr/RabbitMQ-JavaSpringBoot/assets/44978303/bf60b35a-be87-442d-9adb-9cf05311ae5e)
+
 **PASSO 1:**
 
 Adicione o RabbitMQ no Docker com o **docker-compose.yml** abaixo:
-
-version: "3.2"
-services:
-  rabbitmq:
-    image: rabbitmq:3-management-alpine
-    container_name: 'rabbitmq'
-    ports:
-        - 5672:5672
-        - 15672:15672
-    volumes:
-        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
-        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
-    networks:
-        - rabbitmq_curso
-
-networks:
-  rabbitmq_curso:
-    driver: bridge
 
 
 **PASSO 2:**
 
 
-Adicione as variáveis de ambiante no IntelliJ:
+Adicione as variáveis de ambiante no **IntelliJ:**
 
 No projeto: **PRODUCER-SERVICE-API**
 -DServer.port=8081
